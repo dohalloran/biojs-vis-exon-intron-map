@@ -1,6 +1,6 @@
 # biojs-vis-exon-intron-map
 
-**Creates a gene exon intron map**
+**Create an exon intron map for alternative spliceforms with decorations**
 
 `npm install biojs-vis-exon-intron-map` 
 
@@ -11,13 +11,11 @@
 
 
 ## Getting Started
-**Into the text area enter fastA formatted sequences with exons in uppercase and introns in lowercase**  
-press **submit** and enjoy the exon:intron map. Deletions, SNPs, and knock-ins can also be decorated  
+**Enter fastA formatted sequence(s) with exons in uppercase and introns in lowercase**  
+Deletions, SNPs, and knock-ins can also be decorated  
 
 ## Output
-- Draw lines under sequence map to get forward and reverse primers 
-- Visualize the forward primers as lines from left to right and reverse primers as lines from right to left  
-
+- SVG graphic  
 
 ## Contributing
 
