@@ -1,0 +1,52 @@
+{
+  "name": "biojs-vis-exon-intron-map",
+  "description": "Generates exon intron map",
+  "version": "2.0.0",
+  "homepage": "https://github.com/dohalloran/biojs-vis-exon-intron-map",
+  "author": {
+    "name": "dohalloran",
+    "email": "damienoh@gwu.edu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dohalloran/biojs-vis-exon-intron-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dohalloran/biojs-vis-exon-intron-map/issues"
+  },
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1",
+    "build": "mkdirp build && browserify -r ./:biojs-vis-exon-intron-map -o build/biojs-vis-exon-intron-map.js",
+    "build-browser": "npm run build",
+    "prepublish": "npm run build",
+    "watch": "watchify -r ./:biojs-vis-exon-intron-map -v -o build/biojs-vis-exon-intron-map.js",
+    "w": "prunner \"npm run sniper\" \"npm run watch\"",
+    "sniper": "sniper ."
+  },
+  "dependencies": {
+    "d3": "^2.10.3"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.0",
+    "browserify": "6.x",
+    "sniper": "0.x",
+    "watchify": "^1.0.6",
+    "prunner": "1.x"
+  },
+  "sniper": {
+    "js": [
+      "/build/biojs-vis-exon-intron-map.js"
+    ],
+    "snippets": [
+      "examples"
+    ],
+    "first": "simple"
+  },
+  "keywords": [
+    "exon",
+    "intron",
+    "biojs"
+  ]
+}
