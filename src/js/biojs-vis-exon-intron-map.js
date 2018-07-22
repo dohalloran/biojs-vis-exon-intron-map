@@ -206,7 +206,7 @@ class exonIntronMap {
                                 .style('stroke', 'blue')
                                 .attr("stroke-width", 2);
 
-                        const Arrow = '\u2192';
+                        //const Arrow = '\u2192';
 
                         let snpText = svg3.append("text")
                                 .attr("y", 25)
@@ -214,7 +214,7 @@ class exonIntronMap {
                                 .attr("class", "SNP label")
                                 .style("font-size", "11px")
                                 .style("fill", "blue")
-                                .text("ATG" + Arrow + "GTG");
+                                .text(this.snpText);
                 }
                 ////// end of mutation
                 ///////////////////////////////////////////
@@ -411,7 +411,7 @@ function hasLowerCase(str) {
 
 ////////////////////////////////////////////
 ////									
-////								
+////									
 ////		     THE END				
 ////									
 ////									
