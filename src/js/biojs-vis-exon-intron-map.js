@@ -69,17 +69,29 @@ class exonIntronMap {
                                 alert("Enter SNP position");
                         }
                 }
+
                 if (this.knockinPoint) {
                         if (isNaN(this.knockinPoint)) {
                                 alert("Enter knock-in position");
                         }
                 }
+
+                if (!this.knockinText) {
+                	this.knockinText = "knockin";
+                }
+
+
+                if (!this.knockinColor) {
+                	this.knockinColor = "green";
+                }
+
                 this.smallestEl = Array.min(this.eachCoords);
 
                 this.scale();
 
         }
-
+        // method to design scale bar 
+        // with user supplies coordinates
         scale() {
 
                 let margin = {
@@ -118,18 +130,19 @@ class exonIntronMap {
                 this.init();
 
         }
-
+        // method to begin decorating with lesions
+        // i.e. deltions, knockin, snp
         init() {
 
                 //set margin
                 let margin = {
-                                top: 0,
+                                top: 5,
                                 right: 50,
                                 bottom: 0,
                                 left: 80
                         },
                         width = funcAdjustSvg(this.longest.length, this.longest, 1000),
-                        height = 120;
+                        height = 30;
                 //add d3 svg
                 let svg3 = d3.select("body").append("svg")
                         .attr("width", width + margin.left + margin.right)
@@ -142,14 +155,14 @@ class exonIntronMap {
                         let startDel = this.delPoint[0];
                         let endDel = this.delPoint[1];
                         let sizeDel = endDel - startDel;
-                        let delPoints = funcAdjustSvg(startDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 100 + ', ' + (funcAdjustSvg(startDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + funcAdjustSvg(sizeDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000))) + ' ' + 100;
+                        let delPoints = funcAdjustSvg(startDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 25 + ', ' + (funcAdjustSvg(startDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + funcAdjustSvg(sizeDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000))) + ' ' + 25;
                         svg3.append('polyline')
                                 .attr('points', delPoints)
                                 .style('stroke', 'red')
                                 .attr("stroke-width", 3);
 
                         let delText = svg3.append("text")
-                                .attr("y", 95)
+                                .attr("y", 20)
                                 .attr("x", (funcAdjustSvg(startDel, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000))))
                                 .attr("class", "deletion label")
                                 .style("font-size", "11px")
@@ -165,21 +178,21 @@ class exonIntronMap {
                         let endIns = knockinPoint + (this.longest.length / 20);
                         let sizeIns = endIns - startIns;
 
-                        let insPoints = funcAdjustSvg(knockinPoint, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 115 + ', ' + funcAdjustSvg(startIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 65 + ', ' + (funcAdjustSvg(startIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + funcAdjustSvg(sizeIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000))) + ' ' + 65 + ', ' + funcAdjustSvg(knockinPoint, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 115;
+                        let insPoints = funcAdjustSvg(knockinPoint, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 30 + ', ' + funcAdjustSvg(startIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 10 + ', ' + (funcAdjustSvg(startIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + funcAdjustSvg(sizeIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000))) + ' ' + 10 + ', ' + funcAdjustSvg(knockinPoint, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 30;
                         svg3.append('polyline')
                                 .attr('points', insPoints)
                                 .style("stroke-dasharray", ("3,3"))
-                                .style('stroke', 'green')
+                                .style('stroke', this.knockinColor)
                                 .attr("stroke-width", 2)
                                 .style("fill", "#fff");
 
                         let insText = svg3.append("text")
-                                .attr("y", 60)
+                                .attr("y", 7)
                                 .attr("x", funcAdjustSvg(startIns, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)))
                                 .attr("class", "insertion label")
                                 .style("font-size", "12px")
-                                .style("fill", "green")
-                                .text("GFP knockin");
+                                .style("fill", this.knockinColor)
+                                .text(this.knockinText);
                 }
                 ////// end of insertion
                 ///////////////////////////////////////////
@@ -187,7 +200,7 @@ class exonIntronMap {
                 if (this.snpPoint) {
                         let posSNP = this.snpPoint;
 
-                        let snpPoints = funcAdjustSvg(posSNP, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 105 + ', ' + funcAdjustSvg(posSNP, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 120;
+                        let snpPoints = funcAdjustSvg(posSNP, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 10 + ', ' + funcAdjustSvg(posSNP, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + ' ' + 30;
                         svg3.append('polyline')
                                 .attr('points', snpPoints)
                                 .style('stroke', 'blue')
@@ -196,7 +209,7 @@ class exonIntronMap {
                         const Arrow = '\u2192';
 
                         let snpText = svg3.append("text")
-                                .attr("y", 115)
+                                .attr("y", 25)
                                 .attr("x", (funcAdjustSvg(posSNP, this.longest, funcAdjustSvg(this.longest.length, this.longest, 1000)) + 1))
                                 .attr("class", "SNP label")
                                 .style("font-size", "11px")
@@ -220,7 +233,6 @@ class exonIntronMap {
                         let currentName = this.eachGeneName.shift();
 
                         let endIncrement = funcAdjustSvg(this.eachGene[g].length, this.longest, 1000);
-                        console.log(endIncrement);
 
                         this.eachGene[g] = this.eachGene[g].replace(/(\r\n\t|\n|\r\t)/gm, "");
                         this.eachGene[g] = this.eachGene[g].replace(/\s+/g, "").trim();
@@ -398,9 +410,9 @@ function hasLowerCase(str) {
 ///////////////////////////////////////////
 
 ////////////////////////////////////////////
-////									////
-////									////
-////		     THE END				////
-////									////
-////									////
+////					////
+////					////
+////		     THE END	        ////
+////					////
+////					////
 ////////////////////////////////////////////
