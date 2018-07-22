@@ -13,7 +13,7 @@
 ## Getting Started 
 
 exons are in `UPPERCASE` and introns in `lowercase`  
-sequences supplies in `fastA format` with line break `\n` after identifier
+sequences supplied in `fastA format` with line break `\n` after identifier
 
 ```javascript
 let myMap = new exonIntronMap(">C10G8.5a\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCTGGTGGCCCTCGCTGGACTCGCAGATGCTGGATCCAACTGTTCAGCAGCCGACGCCACTAGAAACTGCATCGATGGACTTGTTATACCTATTTGgtgaggatttaaactaaaacaaagcttgaat>C10G8.5b\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCTGGTGGCCCTCGCTGGACTCGCAGATGCTGGATCCAACTGTTCAGCAGCCGACGCCACTAGAAACTGCATCGATGGACTTGTTATACCTATTTGgtgaggatttaaactaaaacaaagcttgaatcaaaatttga>C10G8.5c\nATGAAGGAGGGAGAGATCGTTTTTGAAGACAACCAGACTGAgtacatcacctaccaatatcgtttttcttcaactttttttccagAGCTCTTGTTGAAATTGGAATTGTCGATACTGAACAATACGAACGCTCCGACTACTTCTACATCGAGCTTTCCCCACCAATCTGGGCCAAGAAGATGAATGgtgagtatttttggaactatttttttaagtgaaacaacaaaaacgcttctacatatacatatgtgcacattgttaatttcactacaacaacacaacaacaaaaacaatcaattaat");
