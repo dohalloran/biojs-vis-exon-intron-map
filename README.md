@@ -12,47 +12,46 @@
 
 ## Getting Started 
 
-**exons are in `UPPERCASE` and introns in `lowercase`  
-**sequences supplies in fastA format with line break `\n` after identifier
+exons are in `UPPERCASE` and introns in `lowercase`  
+sequences supplies in `fastA format` with line break `\n` after identifier
 
 ```javascript
 let myMap = new exonIntronMap(">C10G8.5a\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCTGGTGGCCCTCGCTGGACTCGCAGATGCTGGATCCAACTGTTCAGCAGCCGACGCCACTAGAAACTGCATCGATGGACTTGTTATACCTATTTGgtgaggatttaaactaaaacaaagcttgaat>C10G8.5b\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCTGGTGGCCCTCGCTGGACTCGCAGATGCTGGATCCAACTGTTCAGCAGCCGACGCCACTAGAAACTGCATCGATGGACTTGTTATACCTATTTGgtgaggatttaaactaaaacaaagcttgaatcaaaatttga>C10G8.5c\nATGAAGGAGGGAGAGATCGTTTTTGAAGACAACCAGACTGAgtacatcacctaccaatatcgtttttcttcaactttttttccagAGCTCTTGTTGAAATTGGAATTGTCGATACTGAACAATACGAACGCTCCGACTACTTCTACATCGAGCTTTCCCCACCAATCTGGGCCAAGAAGATGAATGgtgagtatttttggaactatttttttaagtgaaacaacaaaaacgcttctacatatacatatgtgcacattgttaatttcactacaacaacacaacaacaaaaacaatcaattaat");
 		
 ```
 
-**add coordinates to position the spliceforms relative to one another and correctly number the scale   
-**Must be supplied in the same order as the sequences
+add coordinates to position the spliceforms relative to one another and correctly number the scale   
+Must be supplied in the same order as the sequences
 
 ```javascript
 myMap.coords = "5303692,5303692,5307700";
 ```
 
-**label the scale:
+label the scale:
 ```javascript
 myMap.chromosomeName = "Chromosome II";
 ```
 
-**add decorations:
-1)SNP
+add decorations:  
+1. SNP
 ```javascript
 myMap.snpPoint = 3800;
 const Arrow = '\u2192';
 myMap.snpText = "ATG" + Arrow + "GTG";
-alert(s);
 ```
-2)Deletion
+2. Deletion
 ```javascript
 myMap.deletion = "1200,1650";
 myMap.delName = "ems deletion";
 ```
-3)Insertion
+3. Insertion
 ```javascript
 myMap.knockinPoint = 5650;
 myMap.knockinText =  "GFP CRISPR insert";
 myMap.knockinColor = "green";
 ```
-
-**render the SVG image
+  
+render the SVG image
 ```javascript
 myMap.render();
 ```
