@@ -2,7 +2,7 @@
 
 [![NPM version](http://img.shields.io/npm/v/biojs-vis-exon-intron-map.svg)](https://www.npmjs.org/package/biojs-vis-exon-intron-map) 
 
-![exon_intron LOGO](https://user-images.githubusercontent.com/8477977/42912283-a1a4cd74-8abc-11e8-8718-0e69159ce030.png)
+![exon_intron LOGO](https://user-images.githubusercontent.com/8477977/43046738-5f785470-8d9b-11e8-8a84-65bd36bb622b.png)
 
 
 **Creates a gene exon intron map**
