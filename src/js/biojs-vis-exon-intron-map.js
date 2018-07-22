@@ -125,7 +125,7 @@ class exonIntronMap {
                         .attr("class", "scale label")
                         .style("font-size", "13px")
                         .style("fill", "black")
-                        .text("Chromosome V");
+                        .text(this.chromosomeName);
 
                 this.init();
 
@@ -167,7 +167,7 @@ class exonIntronMap {
                                 .attr("class", "deletion label")
                                 .style("font-size", "11px")
                                 .style("fill", "red")
-                                .text("tm1406");
+                                .text(this.delName);
                 }
                 ////// end of deletion
                 ///////////////////////////////////////////
@@ -410,9 +410,9 @@ function hasLowerCase(str) {
 ///////////////////////////////////////////
 
 ////////////////////////////////////////////
-////					////
-////					////
-////		     THE END	        ////
-////					////
-////					////
+////									
+////								
+////		     THE END				
+////									
+////									
 ////////////////////////////////////////////
