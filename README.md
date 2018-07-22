@@ -11,6 +11,11 @@
 
 
 ## Getting Started 
+```HTML
+<script src="js/d3.js"></script>
+<script src="js/biojs-vis-exon-intron-map.js"></script>
+<link rel="stylesheet" href="css/biojs-vis-exon-intron-map.css">
+```
 
 exons are in `UPPERCASE` and introns in `lowercase`  
 sequences supplied in `fastA format` with line break `\n` after identifier
