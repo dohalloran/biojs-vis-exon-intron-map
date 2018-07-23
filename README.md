@@ -2,31 +2,29 @@
 
 **Create an exon intron map for alternative spliceforms with decorations**
 
-`npm install biojs-vis-exon-intron-map` 
-
 
 [![NPM version](http://img.shields.io/npm/v/biojs-vis-exon-intron-map.svg)](https://www.npmjs.org/package/biojs-vis-exon-intron-map) 
 
 ![exon_intron LOGO](https://user-images.githubusercontent.com/8477977/43047557-e06f3cb4-8da6-11e8-8de4-c86a5de43c91.png)
 
 
-## Getting Started  
+## Getting Started in the browser 
 ```HTML
 <script src="js/d3.js"></script>
 <script src="js/biojs-vis-exon-intron-map.js"></script>
 <link rel="stylesheet" href="css/biojs-vis-exon-intron-map.css">
 ```
 
-exons are in `UPPERCASE` and introns in `lowercase`  
-sequences supplied in `fastA format` with line break `\n` after identifier
+- exons are in `UPPERCASE` and introns in `lowercase`  
+- sequences supplied in `fastA format` with line break `\n` after identifier
 
 ```javascript
 let myMap = new exonIntronMap(">C10G8.5a\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCTGGTGGCCCTCGCTGGACTCGCAGATGCTGGATCCAACTGTTCAGCAGCCGACGCCACTAGAAACTGCATCGATGGACTTGTTATACCTATTTGgtgaggatttaaactaaaacaaagcttgaat>C10G8.5b\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCTGGTGGCCCTCGCTGGACTCGCAGATGCTGGATCCAACTGTTCAGCAGCCGACGCCACTAGAAACTGCATCGATGGACTTGTTATACCTATTTGgtgaggatttaaactaaaacaaagcttgaatcaaaatttga>C10G8.5c\nATGAAGGAGGGAGAGATCGTTTTTGAAGACAACCAGACTGAgtacatcacctaccaatatcgtttttcttcaactttttttccagAGCTCTTGTTGAAATTGGAATTGTCGATACTGAACAATACGAACGCTCCGACTACTTCTACATCGAGCTTTCCCCACCAATCTGGGCCAAGAAGATGAATGgtgagtatttttggaactatttttttaagtgaaacaacaaaaacgcttctacatatacatatgtgcacattgttaatttcactacaacaacacaacaacaaaaacaatcaattaat");
 		
 ```
 
-add coordinates to position the spliceforms relative to one another and correctly number the scale   
-Must be supplied in the same order as the sequences
+- add coordinates to position the spliceforms relative to one another and correctly number the scale   
+- __Must__ be supplied in the same order as the sequences
 
 ```javascript
 myMap.coords = "5303692,5303692,5307700";
@@ -61,11 +59,18 @@ render the SVG image
 myMap.render();
 ```
 
+## Getting started with Node.js 
+- `git clone git clone https://github.com/dohalloran/biojs-vis-exon-intron-map.git`
+- `cd` into repo
+- `npm install` 
+- alternatively `npm install biojs-vis-exon-intron-map` 
+
 ## Output 
-- Exon intron graphic with lesion decorations all in high resolution SVG format
+- Exon intron graphic with lesion decorations in high resolution Scalable Vector Graphics (SVG) format
 
 ## Example directory  
-- sample files are rendered from the `examples` dir at the [BioJS registry](http://biojs.io/d/biojs-vis-exon-intron-map)
+- sample files are rendered from the `examples` dir at the [BioJS registry](http://biojs.io/d/biojs-vis-exon-intron-map) 
+- __note__: will take a minute to render the sample files at BioJS
 
 ## Contributing
 
