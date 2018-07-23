@@ -54,7 +54,7 @@ myMap.knockinText =  "GFP CRISPR insert";
 myMap.knockinColor = "green";
 ```
   
-render the SVG image
+4. render the SVG image
 ```javascript
 myMap.render();
 ```
