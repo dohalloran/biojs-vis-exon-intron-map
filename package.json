@@ -15,7 +15,7 @@
     "url": "https://github.com/dohalloran/biojs-vis-exon-intron-map/issues"
   },
   "license": "MIT",
-  "main": "src/biojs-vis-exon-intron-map.js",
+  "main": "src/js/biojs-vis-exon-intron-map.js",
   "scripts": {
     "test": "echo 'Error: no test specified' && exit 1",
     "build": "mkdirp build && browserify -r ./:biojs-vis-exon-intron-map -o build/biojs-vis-exon-intron-map.js",
