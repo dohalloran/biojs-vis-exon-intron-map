@@ -30,12 +30,12 @@ let myMap = new exonIntronMap(">C10G8.5a\nATGACTCGATTAGGGTGTTGGCTAGCAGTAGCCTTTCT
 myMap.coords = "5303692,5303692,5307700";
 ```
 
-label the scale:
+- label the scale:
 ```javascript
 myMap.chromosomeName = "Chromosome II";
 ```
 
-add decorations:  
+- add decorations:  
 1. SNP
 ```javascript
 myMap.snpPoint = 3800;
