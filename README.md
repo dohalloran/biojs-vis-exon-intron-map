@@ -10,7 +10,7 @@
 ![exon_intron LOGO](https://user-images.githubusercontent.com/8477977/43047557-e06f3cb4-8da6-11e8-8de4-c86a5de43c91.png)
 
 
-## Getting Started 
+## Getting Started  
 ```HTML
 <script src="js/d3.js"></script>
 <script src="js/biojs-vis-exon-intron-map.js"></script>
@@ -61,8 +61,11 @@ render the SVG image
 myMap.render();
 ```
 
-## Output
-- Exon intron graphic with lesion decorations all in high resolution SVG format  
+## Output 
+- Exon intron graphic with lesion decorations all in high resolution SVG format
+
+## Example directory  
+- sample files are rendered from the `examples` dir at the [BioJS registry](http://biojs.io/d/biojs-vis-exon-intron-map)
 
 ## Contributing
 
