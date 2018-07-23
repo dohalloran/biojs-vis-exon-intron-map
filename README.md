@@ -60,7 +60,7 @@ myMap.render();
 ```
 
 ## Getting started with Node.js 
-- `git clone git clone https://github.com/dohalloran/biojs-vis-exon-intron-map.git`
+- `git clone https://github.com/dohalloran/biojs-vis-exon-intron-map.git`
 - `cd` into repo
 - `npm install` 
 - alternatively `npm install biojs-vis-exon-intron-map` 
@@ -70,7 +70,7 @@ myMap.render();
 
 ## Example directory  
 - sample files are rendered from the `examples` dir at the [BioJS registry](http://biojs.io/d/biojs-vis-exon-intron-map) 
-- __note__: will take a minute to render the sample files at BioJS
+- __note__: it takes a minute to render the sample files at BioJS
 
 ## Contributing
 
