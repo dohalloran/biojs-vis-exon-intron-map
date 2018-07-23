@@ -59,11 +59,8 @@ myMap.knockinColor = "green";
 myMap.render();
 ```
 
-## Getting started with Node.js 
-- `git clone https://github.com/dohalloran/biojs-vis-exon-intron-map.git`
-- `cd` into repo
-- `npm install` 
-- alternatively `npm install biojs-vis-exon-intron-map` 
+## From npm
+- `npm install biojs-vis-exon-intron-map` 
 
 ## Output 
 - Exon intron graphic with lesion decorations in high resolution Scalable Vector Graphics (SVG) format
