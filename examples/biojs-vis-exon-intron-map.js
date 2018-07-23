@@ -95,7 +95,7 @@ class exonIntronMap {
         scale() {
 
                 let margin = {
-                                top: 0,
+                                top: 150,
                                 right: 50,
                                 bottom: 0,
                                 left: 80
