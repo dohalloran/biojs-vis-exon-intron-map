@@ -5,7 +5,7 @@
 
 [![NPM version](http://img.shields.io/npm/v/biojs-vis-exon-intron-map.svg)](https://www.npmjs.org/package/biojs-vis-exon-intron-map) 
 
-![exon_intron LOGO](https://user-images.githubusercontent.com/8477977/43047557-e06f3cb4-8da6-11e8-8de4-c86a5de43c91.png)
+![exon_intron LOGO](https://user-images.githubusercontent.com/8477977/43140700-5d47f240-8f22-11e8-90c9-30353a85fd35.png)
 
 
 ## Getting Started in the browser 
